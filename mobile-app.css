@@ -42,7 +42,7 @@
     
     /* Better mobile navigation */
     .navbar-toggle {
-        display: block;
+        display: block !important;
     }
     
     .nav-collapse {
@@ -173,5 +173,30 @@
     .navbar-nav > li > a {
         padding: 15px 20px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Ensure hamburger menu is visible on all mobile devices */
+    .navbar-toggle {
+        display: block !important;
+    }
+    
+    .header .navbar-toggle {
+        display: block !important;
+        margin: 15px 0;
+    }
+    
+    .header .navbar-toggle .toggle-icon {
+        background: #FB5D00;
+    }
+    
+    .header .navbar-toggle .toggle-icon:before,
+    .header .navbar-toggle .toggle-icon:after {
+        background: #FB5D00;
+    }
+    
+    .header .navbar-toggle:hover .toggle-icon,
+    .header .navbar-toggle:hover .toggle-icon:before,
+    .header .navbar-toggle:hover .toggle-icon:after {
+        background: #FF8C00;
     }
 } 

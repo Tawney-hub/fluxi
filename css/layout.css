@@ -578,7 +578,7 @@ fieldset[disabled] .btn-theme {
   width: 21px;
   height: 1px;
   display: inline-block;
-  background: #515769;
+  background: #FB5D00;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -587,7 +587,7 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle .toggle-icon:before, .header .navbar-toggle .toggle-icon:after {
   position: absolute;
   left: 0;
-  background: #515769;
+  background: #FB5D00;
   content: " ";
 }
 
@@ -616,7 +616,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .navbar-toggle:hover .toggle-icon {
-  background: #17bed2;
+  background: #FF8C00;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -625,14 +625,14 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle:hover .toggle-icon:before, .header .navbar-toggle:hover .toggle-icon:after {
   width: 21px;
   height: 1px;
-  background: #17bed2;
+  background: #FF8C00;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
 .header .navbar-toggle:hover .toggle-icon.is-clicked {
-  background: rgba(81, 87, 105, 0);
+  background: rgba(251, 93, 0, 0);
 }
 
 /* Navbar Logo */
@@ -819,6 +819,38 @@ fieldset[disabled] .btn-theme {
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+  }
+  
+  /* Ensure hamburger menu is always visible on small screens */
+  .header .navbar-toggle {
+    display: block !important;
+    margin: 20px 0;
+  }
+  
+  .header .navbar-collapse.collapse {
+    display: none !important;
+  }
+  
+  .header .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+}
+
+/* Media Queries for very small screens */
+@media (max-width: 480px) {
+  .header .navbar-toggle {
+    display: block !important;
+    margin: 15px 0;
+  }
+  
+  .header .menu-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .header .navbar > .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
