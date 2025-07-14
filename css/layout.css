@@ -576,9 +576,9 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle .toggle-icon {
   position: relative;
   width: 21px;
-  height: 1px;
+  height: 2px;
   display: inline-block;
-  background: #FB5D00;
+  background: #FF6B35;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -587,13 +587,13 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle .toggle-icon:before, .header .navbar-toggle .toggle-icon:after {
   position: absolute;
   left: 0;
-  background: #FB5D00;
+  background: #FF6B35;
   content: " ";
 }
 
 .header .navbar-toggle .toggle-icon:before {
   width: 10px;
-  height: 1px;
+  height: 2px;
   bottom: 10px;
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -605,7 +605,7 @@ fieldset[disabled] .btn-theme {
 
 .header .navbar-toggle .toggle-icon:after {
   width: 16px;
-  height: 1px;
+  height: 2px;
   top: -5px;
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -616,7 +616,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .navbar-toggle:hover .toggle-icon {
-  background: #FF8C00;
+  background: #FF4500;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -624,15 +624,15 @@ fieldset[disabled] .btn-theme {
 
 .header .navbar-toggle:hover .toggle-icon:before, .header .navbar-toggle:hover .toggle-icon:after {
   width: 21px;
-  height: 1px;
-  background: #FF8C00;
+  height: 2px;
+  background: #FF4500;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
 .header .navbar-toggle:hover .toggle-icon.is-clicked {
-  background: rgba(251, 93, 0, 0);
+  background: rgba(255, 107, 53, 0);
 }
 
 /* Navbar Logo */

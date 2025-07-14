@@ -186,17 +186,250 @@
     }
     
     .header .navbar-toggle .toggle-icon {
-        background: #FB5D00;
+        background: #FF6B35 !important;
+        height: 2px !important;
     }
     
     .header .navbar-toggle .toggle-icon:before,
     .header .navbar-toggle .toggle-icon:after {
-        background: #FB5D00;
+        background: #FF6B35 !important;
+        height: 2px !important;
     }
     
     .header .navbar-toggle:hover .toggle-icon,
     .header .navbar-toggle:hover .toggle-icon:before,
     .header .navbar-toggle:hover .toggle-icon:after {
-        background: #FF8C00;
+        background: #FF4500 !important;
+    }
+    
+    /* Portfolio Section Mobile Improvements */
+    .portfolio-section-glass {
+        padding: 40px 0;
+    }
+    
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 16px;
+        max-width: 100%;
+    }
+    
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        background: #151312;
+        border-radius: 14px;
+        box-shadow: 0 4px 24px rgba(21,19,18,0.18);
+        border: 2px solid #FB5D00;
+        transition: box-shadow 0.3s, transform 0.3s;
+        flex-direction: column;
+        min-height: 350px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    
+    .portfolio-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        transition: transform 0.4s cubic-bezier(.4,2,.3,1), filter 0.4s cubic-bezier(.4,2,.3,1);
+        display: block;
+    }
+    
+    .portfolio-item .card-hover {
+        position: absolute;
+        left: 0; right: 0; bottom: 0; top: 0;
+        background: rgba(21,19,18,0.96);
+        color: #fff;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 18px 18px 18px;
+        border-radius: 14px;
+        transition: opacity 0.3s, transform 0.3s;
+        transform: translateY(20px);
+    }
+    
+    .portfolio-item:hover img {
+        transform: scale(1.08);
+        filter: blur(2px) brightness(0.7);
+    }
+    
+    .portfolio-item:hover .card-hover {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    
+    .portfolio-item .card-hover h4 {
+        color: #FB5D00;
+        font-family: 'Poppins',sans-serif;
+        font-weight:700;
+        margin-bottom:10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .portfolio-item .card-hover p {
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 18px;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
+    .portfolio-item .card-hover .card-btn {
+        background: #151312;
+        color: #FB5D00;
+        border: 2px solid #FB5D00;
+        border-radius: 6px;
+        padding: 7px 18px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 8px;
+    }
+    
+    .portfolio-item .card-hover .card-btn:hover {
+        background: #FB5D00;
+        color: #151312;
+        border: 2px solid #151312;
+    }
+    
+    /* Portfolio Filter Buttons Mobile - Responsive Wrapping */
+    .portfolio-filter {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+        padding: 0 16px;
+        row-gap: 8px;
+    }
+    
+    .filter-btn {
+        background: #151312;
+        color: #FB5D00;
+        border: 2px solid #FB5D00;
+        border-radius: 12px;
+        padding: 8px 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+        outline: none;
+        box-shadow: none;
+        margin-bottom: 0;
+        min-width: 80px;
+        flex-shrink: 0;
+    }
+    
+    .filter-btn.active, .filter-btn:focus {
+        background: #FB5D00 !important;
+        color: #151312 !important;
+        border: 2px solid #FB5D00;
+    }
+    
+    .filter-btn:hover {
+        background: #FB5D00;
+        color: #151312;
+        border: 2px solid #FB5D00;
+    }
+    
+    /* Service Cards Mobile Improvements */
+    .service-card {
+        margin-bottom: 24px;
+        min-height: 200px;
+    }
+    
+    .service-card .service {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .service-card .service-icon {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #FB5D00;
+    }
+    
+    .service-card .service-info h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #151312;
+    }
+    
+    .service-card .service-info p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #666;
+    }
+    
+    /* Hamburger Menu Orange Stripes */
+    .header .navbar-toggle .toggle-icon {
+        background: #FF6B35 !important;
+        height: 2px !important;
+    }
+    
+    .header .navbar-toggle .toggle-icon:before,
+    .header .navbar-toggle .toggle-icon:after {
+        background: #FF6B35 !important;
+        height: 2px !important;
+    }
+    
+    .header .navbar-toggle:hover .toggle-icon,
+    .header .navbar-toggle:hover .toggle-icon:before,
+    .header .navbar-toggle:hover .toggle-icon:after {
+        background: #FF4500 !important;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .portfolio-grid {
+        gap: 16px;
+        padding: 0 12px;
+    }
+    
+    .portfolio-item {
+        min-height: 280px;
+    }
+    
+    .portfolio-item img {
+        height: 180px;
+    }
+    
+    .portfolio-filter {
+        gap: 8px;
+        padding: 0 12px;
+    }
+    
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 13px;
+        min-width: 70px;
+    }
+    
+    .portfolio-item .card-hover h4 {
+        font-size: 18px;
+    }
+    
+    .portfolio-item .card-hover p {
+        font-size: 14px;
     }
 } 
