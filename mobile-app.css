@@ -460,3 +460,310 @@
         color: #32CD32 !important;
     }
 } 
+
+/* DEBUG: Fluxi mobile nav/hamburger test - 2024-06-09 */
+@media (max-width: 991px), (max-width: 768px), (max-width: 480px) {
+  /* Hamburger menu stripes - remove all black lines and add debug border */
+  .header .navbar-toggle .toggle-icon,
+  .header .navbar-toggle .toggle-icon:before,
+  .header .navbar-toggle .toggle-icon:after {
+    background: #FF6B35 !important;
+    height: 3px !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+    /* DEBUG: border for testing */
+    border-radius: 2px !important;
+  }
+  .header .navbar-toggle:hover .toggle-icon,
+  .header .navbar-toggle:hover .toggle-icon:before,
+  .header .navbar-toggle:hover .toggle-icon:after {
+    background: #FF4500 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+  }
+  /* Nav links green and debug background */
+  .navbar-nav > li > a,
+  .nav.navbar-nav > li > a,
+  ul.navbar-nav > li > a {
+    color: #00FF00 !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    background: #111 !important; /* DEBUG: dark background for visibility */
+    border-bottom: 2px solid #00FF00 !important; /* DEBUG: green underline */
+    transition: all 0.3s !important;
+  }
+  .navbar-nav > li > a:hover,
+  .nav.navbar-nav > li > a:hover,
+  ul.navbar-nav > li > a:hover {
+    color: #32CD32 !important;
+    background: #222 !important;
+    border-bottom: 2px solid #32CD32 !important;
+  }
+} 
+
+/* --- PORTFOLIO DESKTOP GRID FIX & SQUARE CARDS --- */
+/* Default (desktop) styles */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 0 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  aspect-ratio: 1/1;
+  min-height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #151312;
+  box-shadow: 0 4px 24px rgba(21,19,18,0.18);
+  border: 2px solid #FB5D00;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Flyers: less width, more height (portrait) */
+.portfolio-item.flyer {
+  aspect-ratio: 3/4;
+  min-width: 0;
+  min-height: 380px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.4s cubic-bezier(.4,2,.3,1), filter 0.4s cubic-bezier(.4,2,.3,1);
+  display: block;
+}
+
+/* --- MOBILE OVERRIDES --- */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+  .portfolio-item, .portfolio-item.flyer {
+    aspect-ratio: 1/1;
+    min-height: 350px;
+  }
+  .portfolio-item img {
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio-grid {
+    gap: 16px;
+    padding: 0 12px;
+  }
+  .portfolio-item, .portfolio-item.flyer {
+    min-height: 280px;
+  }
+  .portfolio-item img {
+    height: 180px;
+  }
+}
+/* END PORTFOLIO DESKTOP GRID FIX */ 
+
+/* --- PORTFOLIO FILTER BUTTONS ORANGE/BLACK --- */
+.filter-btn,
+.portfolio-item .card-btn {
+  background: #151312 !important;
+  color: #FB5D00 !important;
+  border: 2px solid #FB5D00 !important;
+  border-radius: 12px;
+  padding: 8px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+.filter-btn.active, .filter-btn:focus, .filter-btn:hover,
+.portfolio-item .card-btn:focus, .portfolio-item .card-btn:hover {
+  background: #FB5D00 !important;
+  color: #151312 !important;
+  border: 2px solid #FB5D00 !important;
+}
+@media (max-width: 768px) {
+  .filter-btn,
+  .portfolio-item .card-btn {
+    font-size: 14px;
+    padding: 8px 20px;
+    min-width: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .filter-btn,
+  .portfolio-item .card-btn {
+    font-size: 13px;
+    padding: 6px 16px;
+    min-width: 70px;
+  }
+}
+/* END PORTFOLIO FILTER BUTTONS ORANGE/BLACK */ 
+
+/* --- MODERN BLACK PRICING CARDS, 3-COLUMN DESKTOP --- */
+.pricing-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 32px !important;
+  justify-content: center !important;
+  padding: 0 32px !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+}
+.pricing-grid .pricing-card {
+  background: rgba(21,19,18,0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 8px rgba(251,93,0,0.10) !important;
+  border: 2.5px solid rgba(251,93,0,0.18) !important;
+  padding: 36px 28px 32px 28px !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin-bottom: 24px !important;
+  transition: box-shadow 0.3s, border 0.3s, transform 0.3s !important;
+  position: relative !important;
+  overflow: hidden !important;
+  color: #fff !important;
+}
+.pricing-grid .pricing-card:hover {
+  box-shadow: 0 16px 48px rgba(251,93,0,0.18), 0 4px 24px rgba(21,19,18,0.22) !important;
+  border: 2.5px solid #FB5D00 !important;
+  transform: translateY(-6px) scale(1.03) !important;
+}
+.pricing-grid .pricing-title {
+  color: #FB5D00 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  margin-bottom: 18px !important;
+  letter-spacing: 0.5px !important;
+  text-align: center !important;
+}
+.pricing-grid .main-price {
+  color: #FB5D00 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 18px !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+}
+.pricing-grid .pricing-details-list {
+  margin-top: 12px !important;
+}
+.pricing-grid .pricing-details-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid rgba(251,93,0,0.08) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 15px !important;
+  color: #fff !important;
+}
+.pricing-grid .pricing-details-type {
+  font-weight: 600 !important;
+  color: #FB5D00 !important;
+}
+.pricing-grid .pricing-details-price {
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+.pricing-grid .pricing-card.graphics-highlight {
+  border: 2.5px solid #FB5D00 !important;
+  box-shadow: 0 0 0 4px rgba(251,93,0,0.10), 0 12px 40px rgba(251,93,0,0.18) !important;
+  background: rgba(251,93,0,0.08) !important;
+}
+.pricing-grid .pricing-card.graphics-highlight::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: 18px;
+  right: -38px;
+  background: linear-gradient(90deg,#FB5D00,#FF8C00);
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 700;
+  padding: 4px 32px;
+  border-radius: 16px;
+  transform: rotate(18deg);
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(251,93,0,0.12);
+}
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 12px !important;
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 600px) {
+  .pricing-grid .pricing-card {
+    padding: 24px 10px 20px 10px !important;
+    border-radius: 16px !important;
+  }
+  .pricing-grid .pricing-title {
+    font-size: 18px !important;
+  }
+  .pricing-grid .main-price {
+    font-size: 24px !important;
+  }
+  .pricing-grid .pricing-details-row {
+    font-size: 13px !important;
+    padding: 7px 0 !important;
+  }
+}
+/* END MODERN BLACK PRICING CARDS, 3-COLUMN DESKTOP */
+
+/* END STRONG PRICING SECTION STYLES */ 
+
+/* --- SMALLER HEADER LOGO ICON --- */
+.logo-img {
+  max-height: 32px !important;
+  height: auto !important;
+  width: auto !important;
+}
+/* END SMALLER HEADER LOGO ICON */ 
+
+@media (max-width: 768px) {
+  .portfolio-filter {
+    position: relative;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+  }
+  .filter-btn {
+    z-index: 101 !important;
+    pointer-events: auto !important;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio-filter {
+    position: relative;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+  }
+  .filter-btn {
+    z-index: 101 !important;
+    pointer-events: auto !important;
+  }
+} 
