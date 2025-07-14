@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+   
+    <head>
+        <meta charset="utf-8"/>
+        <title>Fluxi - Creative Tech Agency</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Fluxi is a South African creative studio that blends software development and graphic design." name="description"/>
+        <meta content="Fluxi" name="author"/>
+        
+        <!-- Mobile App Meta Tags -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Fluxi">
+        <meta name="application-name" content="Fluxi">
+        <meta name="msapplication-TileColor" content="#FB5D00">
+        <meta name="msapplication-tap-highlight" content="no">
+        
+        <!-- App Icons -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="manifest" href="manifest.json">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/modern-orange-black.css" rel="stylesheet" type="text/css"/>
+        <link href="mobile-app.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <style>
+            body, html {
+                font-family: 'Inter', Arial, sans-serif;
+            }
+            h1, h2, h3, h4, h5, h6, .section-heading, .carousel-title, .pricing-title, .footer h3, .footer h4, .service-info h3 {
+                font-family: 'Poppins', 'Inter', Arial, sans-serif !important;
+                font-weight: 700;
+            }
+            /* Modern Innovation Styles */
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+            
+            /* Particle Background */
+            .particle-bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: linear-gradient(135deg, #0a0a0a 0%, #151312 50%, #1a1a1a 100%);
+                overflow: hidden;
+            }
+            
+            .particle {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: #FB5D00;
+                border-radius: 50%;
+                animation: float 6s ease-in-out infinite;
+                opacity: 0.6;
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+                50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+            }
+            
+            /* Modern Glassmorphism Cards */
+            .glass-card {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .glass-card:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 20px 40px rgba(251, 93, 0, 0.2);
+                border-color: rgba(251, 93, 0, 0.3);
+            }
+            
+            /* Animated Gradient Text */
+            .gradient-text {
+                background: linear-gradient(135deg, #FB5D00, #FF8C00, #FF6B35);
+                background-size: 200% 200%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                animation: gradient-shift 3s ease-in-out infinite;
+            }
+            
+            @keyframes gradient-shift {
+                0%, 100% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+            }
+            
+            /* Modern Button Styles */
+            .modern-btn {
+                background: linear-gradient(135deg, #FB5D00, #FF8C00);
+                border: none;
+                border-radius: 50px;
+                padding: 15px 30px;
+                color: white;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(251, 93, 0, 0.3);
+            }
+            
+            .modern-btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                transition: left 0.5s;
+            }
+            
+            .modern-btn:hover::before {
+                left: 100%;
+            }
+            
+            .modern-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(251, 93, 0, 0.4);
+            }
+            
+            /* Floating Animation */
+            .float-animation {
+                animation: float 3s ease-in-out infinite;
+            }
+            
+            /* Glow Effects */
+            .glow-effect {
+                position: relative;
+            }
+            
+            .glow-effect::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, #FB5D00, transparent, #FF8C00);
+                border-radius: inherit;
+                opacity: 0;
+                transition: opacity 0.3s;
+                z-index: -1;
+            }
+            
+            .glow-effect:hover::after {
+                opacity: 0.3;
+            }
+            
+            /* Modern Typography */
+            .modern-font {
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+            }
+            
+            /* Animated Icons */
+            .animated-icon {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .animated-icon:hover {
+                transform: rotate(360deg) scale(1.2);
+                color: #FB5D00;
+            }
+            
+            /* Scroll Animations */
+            .scroll-reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .scroll-reveal.revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Modern Navigation */
+            .modern-nav {
+                background: rgba(21, 19, 18, 0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(251, 93, 0, 0.2);
+                transition: all 0.3s ease;
+            }
+            
+            /* Scrolled Navigation State */
+            .modern-nav.scrolled {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(251, 93, 0, 0.3);
+            }
+            
+            .modern-nav.scrolled .nav-item-child {
+                color: #151312 !important;
+            }
+            
+            .modern-nav.scrolled .nav-item-child:hover {
+                color: #FB5D00 !important;
+            }
+            
+            /* Default Navigation State */
+            .modern-nav .nav-item-child {
+                color: #FFFFFF !important;
+                transition: color 0.3s ease;
+            }
+            
+            .modern-nav .nav-item-child:hover {
+                color: #FB5D00 !important;
+            }
+            
+            /* Hero Section Innovation */
+            .hero-modern {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .hero-modern::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(circle at 30% 20%, rgba(251, 93, 0, 0.1) 0%, transparent 50%),
+                            radial-gradient(circle at 70% 80%, rgba(255, 140, 0, 0.1) 0%, transparent 50%);
+                pointer-events: none;
+            }
+            
+            /* Modern Grid Layout */
+            .modern-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                padding: 20px;
+            }
+            
+            /* Hover Card Effects */
+            .hover-card {
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+            }
+            
+            .hover-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, rgba(251, 93, 0, 0.1), rgba(255, 140, 0, 0.1));
+                opacity: 0;
+                transition: opacity 0.3s;
+                border-radius: inherit;
+            }
+            
+            .hover-card:hover::before {
+                opacity: 1;
+            }
+            
+            /* Modern Form Styling */
+            .modern-input {
+                background: rgba(255, 255, 255, 0.05);
+                border: 2px solid rgba(251, 93, 0, 0.2);
+                border-radius: 12px;
+                padding: 15px 20px;
+                color: white;
+                font-family: 'Inter', sans-serif;
+                transition: all 0.3s;
+                backdrop-filter: blur(10px);
+            }
+            
+            .modern-input:focus {
+                border-color: #FB5D00;
+                box-shadow: 0 0 20px rgba(251, 93, 0, 0.3);
+                outline: none;
+            }
+            
+            /* Loading Animation */
+            .loading-dots {
+                display: inline-block;
+            }
+            
+            .loading-dots::after {
+                content: '';
+                animation: dots 1.5s steps(5, end) infinite;
+            }
+            
+            @keyframes dots {
+                0%, 20% { content: ''; }
+                40% { content: '.'; }
+                60% { content: '..'; }
+                80%, 100% { content: '...'; }
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .modern-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+                
+                .glass-card {
+                    margin: 10px;
+                }
+            }
+            
+            /* Dark Mode Enhancements */
+            @media (prefers-color-scheme: dark) {
+                .glass-card {
+                    background: rgba(255, 255, 255, 0.03);
+                }
+            }
+            
+            /* Performance Optimizations */
+            .will-change {
+                will-change: transform, opacity;
+            }
+            
+            /* Modern Scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: rgba(21, 19, 18, 0.1);
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, #FB5D00, #FF8C00);
+                border-radius: 4px;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, #FF8C00, #FB5D00);
+            }
+            
+            /* Portfolio Section Glass */
+            .portfolio-section-glass {
+                background: rgba(255,255,255,0.18);
+                border-radius: 32px;
+                box-shadow: 0 8px 32px rgba(21,19,18,0.12);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1.5px solid rgba(255,255,255,0.25);
+                padding: 64px 0 32px 0;
+                margin: 0 auto 64px auto;
+                max-width: 1300px;
+            }
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 16px;
+            }
+            .portfolio-item {
+                position: relative;
+                overflow: hidden;
+                display: none;
+                background: #151312;
+                border-radius: 14px;
+                box-shadow: 0 4px 24px rgba(21,19,18,0.18);
+                border: 2px solid #FB5D00;
+                transition: box-shadow 0.3s, transform 0.3s;
+                flex-direction: column;
+            }
+            .portfolio-item .price {
+                color:#FB5D00;
+                font-weight:700;
+                font-size: 18px;
+                position: absolute;
+                left: 18px;
+                bottom: 18px;
+                background: rgba(21,19,18,0.85);
+                padding: 4px 16px;
+                border-radius: 8px;
+                z-index: 2;
+                box-shadow: 0 2px 8px rgba(21,19,18,0.10);
+            }
+            .portfolio-item img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                transition: transform 0.4s cubic-bezier(.4,2,.3,1), filter 0.4s cubic-bezier(.4,2,.3,1);
+                display: block;
+            }
+            .portfolio-item .card-hover {
+                position: absolute;
+                left: 0; right: 0; bottom: 0; top: 0;
+                background: rgba(21,19,18,0.96);
+                color: #fff;
+                opacity: 0;
+                pointer-events: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 32px 18px 18px 18px;
+                border-radius: 14px;
+                transition: opacity 0.3s, transform 0.3s;
+                transform: translateY(20px);
+            }
+            .portfolio-item:hover img {
+                transform: scale(1.08);
+                filter: blur(2px) brightness(0.7);
+            }
+            .portfolio-item:hover .card-hover {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+            .portfolio-item .card-hover h4 {
+                color: #FB5D00;
+                font-family: 'Poppins',sans-serif;
+                font-weight:700;
+                margin-bottom:10px;
+                font-size: 20px;
+            }
+            .portfolio-item .card-hover p {
+                color: #fff;
+                font-size: 15px;
+                margin-bottom: 18px;
+                text-align: center;
+            }
+            .portfolio-item .card-hover .card-btn {
+                background: #151312;
+                color: #FB5D00;
+                border: 2px solid #FB5D00;
+                border-radius: 6px;
+                padding: 7px 18px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 15px;
+                cursor: pointer;
+                transition: all 0.2s;
+                margin-top: 8px;
+            }
+            .portfolio-item .card-hover .card-btn:hover {
+                background: #FB5D00;
+                color: #151312;
+                border: 2px solid #151312;
+            }
+            .portfolio-filter {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+                margin-bottom: 32px;
+            }
+            .filter-btn {
+                background: #151312;
+                color: #FB5D00;
+                border: 2px solid #FB5D00;
+                border-radius: 12px;
+                padding: 10px 28px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.2s;
+                outline: none;
+                box-shadow: none;
+                margin-bottom: 0;
+            }
+            .filter-btn.active, .filter-btn:focus {
+                background: #FB5D00 !important;
+                color: #151312 !important;
+                border: 2px solid #FB5D00;
+            }
+            .filter-btn:hover {
+                background: #FB5D00;
+                color: #151312;
+                border: 2px solid #FB5D00;
+            }
+            @media (max-width: 1000px) {
+                .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (max-width: 700px) {
+                .portfolio-grid { grid-template-columns: 1fr; gap: 20px; }
+                .portfolio-item img { height: 120px; }
+                .portfolio-item .card-content { padding: 12px 8px 8px 8px; }
+            }
+            .pricing-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+                max-width: 1200px;
+                margin: 0 auto 64px auto;
+                padding: 0 16px;
+            }
+            .pricing-card {
+                background: #151312;
+                border-radius: 18px;
+                box-shadow: 0 4px 24px rgba(21,19,18,0.18);
+                border: 2px solid #FB5D00;
+                color: #fff;
+                padding: 32px 28px 24px 28px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                transition: box-shadow 0.3s, transform 0.3s;
+            }
+            .pricing-card .pricing-title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 22px;
+                color: #FB5D00;
+                margin-bottom: 12px;
+                text-align: center;
+            }
+            .pricing-card .main-price {
+                font-size: 32px;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            .pricing-card .expand-btn {
+                background: #151312;
+                color: #FB5D00;
+                border: 2px solid #FB5D00;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                font-weight: 700;
+                cursor: pointer;
+                margin: 0 auto 12px auto;
+                transition: background 0.2s, color 0.2s;
+            }
+            .pricing-card .expand-btn:hover {
+                background: #FB5D00;
+                color: #151312;
+            }
+            .pricing-card .pricing-details {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.4s cubic-bezier(.4,2,.3,1), opacity 0.3s;
+                margin-top: 0;
+            }
+            .pricing-card.expanded .pricing-details {
+                max-height: 400px;
+                opacity: 1;
+                margin-top: 18px;
+            }
+            .pricing-card .pricing-details ul {
+                padding-left: 18px;
+                margin-bottom: 10px;
+            }
+            .pricing-card .pricing-details li {
+                margin-bottom: 6px;
+                font-size: 15px;
+            }
+            .pricing-card .pricing-details .sub-price {
+                color: #FB5D00;
+                font-weight: 600;
+                margin-left: 6px;
+            }
+            .pricing-card .pricing-details-list {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+            .pricing-card .pricing-details-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 6px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .pricing-card .pricing-details-type {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                font-family: 'Poppins', sans-serif;
+            }
+            .pricing-card .pricing-details-price {
+                color: #FB5D00;
+                font-size: 16px;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+            }
+            @media (max-width: 1000px) {
+                .pricing-grid { grid-template-columns: 1fr; }
+            }
+            .section-heading {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            .section-heading::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, transparent, #FB5D00, transparent);
+                border-radius: 2px;
+                box-shadow: 0 0 10px rgba(251, 93, 0, 0.6);
+                animation: glow 2s ease-in-out infinite alternate;
+            }
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 10px rgba(251, 93, 0, 0.6);
+                }
+                to {
+                    box-shadow: 0 0 20px rgba(251, 93, 0, 0.8), 0 0 30px rgba(251, 93, 0, 0.4);
+                }
+            }
+            .service-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(251, 93, 0, 0.2);
+            }
+            .service-card .service {
+                transition: all 0.3s ease;
+            }
+            .service-card:hover .service {
+                border-color: #FB5D00;
+            }
+            .service-card:hover .service-icon {
+                transform: scale(1.1);
+                color: #FB5D00 !important;
+            }
+            .service-card:hover h3 {
+                color: #FB5D00 !important;
+            }
+            .service-card::after {
+                content: 'Click for more info';
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(251, 93, 0, 0.9);
+                color: white;
+                padding: 4px 12px;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: 600;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                white-space: nowrap;
+            }
+            .service-card:hover::after {
+                opacity: 1;
+            }
+            .install-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                background: #FB5D00;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 25px;
+                box-shadow: 0 4px 12px rgba(251, 93, 0, 0.3);
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                transition: all 0.3s ease;
+                display: none; /* Hidden by default */
+            }
+            
+            .install-button:active {
+                transform: translateY(0);
+            }
+            
+            /* Modern Innovation Styles */
+            .particle-bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: linear-gradient(135deg, #0a0a0a 0%, #151312 50%, #1a1a1a 100%);
+                overflow: hidden;
+            }
+            
+            .particle {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: #FB5D00;
+                border-radius: 50%;
+                animation: float 6s ease-in-out infinite;
+                opacity: 0.6;
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+                50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+            }
+            
+            /* Modern Glassmorphism Cards */
+            .glass-card {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .glass-card:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 20px 40px rgba(251, 93, 0, 0.2);
+                border-color: rgba(251, 93, 0, 0.3);
+            }
+            
+            /* Animated Gradient Text */
+            .gradient-text {
+                background: linear-gradient(135deg, #FB5D00, #FF8C00, #FF6B35);
+                background-size: 200% 200%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                animation: gradient-shift 3s ease-in-out infinite;
+            }
+            
+            @keyframes gradient-shift {
+                0%, 100% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+            }
+            
+            /* Modern Button Styles */
+            .modern-btn {
+                background: linear-gradient(135deg, #FB5D00, #FF8C00);
+                border: none;
+                border-radius: 50px;
+                padding: 15px 30px;
+                color: white;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(251, 93, 0, 0.3);
+            }
+            
+            .modern-btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                transition: left 0.5s;
+            }
+            
+            .modern-btn:hover::before {
+                left: 100%;
+            }
+            
+            .modern-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(251, 93, 0, 0.4);
+            }
+            
+            /* Modern Navigation */
+            .modern-nav {
+                background: rgba(21, 19, 18, 0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(251, 93, 0, 0.2);
+                transition: all 0.3s ease;
+            }
+            
+            /* Scrolled Navigation State */
+            .modern-nav.scrolled {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(251, 93, 0, 0.3);
+            }
+            
+            .modern-nav.scrolled .nav-item-child {
+                color: #151312 !important;
+            }
+            
+            .modern-nav.scrolled .nav-item-child:hover {
+                color: #FB5D00 !important;
+            }
+            
+            /* Default Navigation State */
+            .modern-nav .nav-item-child {
+                color: #FFFFFF !important;
+                transition: color 0.3s ease;
+            }
+            
+            .modern-nav .nav-item-child:hover {
+                color: #FB5D00 !important;
+            }
+            
+            /* Hero Section Innovation */
+            .hero-modern {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .hero-modern::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(circle at 30% 20%, rgba(251, 93, 0, 0.1) 0%, transparent 50%),
+                            radial-gradient(circle at 70% 80%, rgba(255, 140, 0, 0.1) 0%, transparent 50%);
+                pointer-events: none;
+            }
+            
+            /* Scroll Animations */
+            .scroll-reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .scroll-reveal.revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Header Download App Button */
+            .download-app-item {
+                margin-left: 15px;
+            }
+            
+            .download-app-btn {
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            
+            .download-app-btn:hover {
+                transform: scale(1.1);
+            }
+            
+            .download-app-btn::after {
+                content: 'Download App';
+                position: absolute;
+                bottom: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(251, 93, 0, 0.95);
+                color: white;
+                padding: 6px 12px;
+                border-radius: 8px;
+                font-size: 12px;
+                font-weight: 600;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 1000;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            .download-app-btn:hover::after {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) translateY(-5px);
+            }
+            
+            .download-app-btn i {
+                font-size: 18px;
+                transition: all 0.3s ease;
+            }
+            
+            .download-app-btn:hover i {
+                color: #FF8C00 !important;
+            }
+            
+            @media (max-width: 768px) {
+                .download-app-item {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+                
+                .download-app-btn::after {
+                    display: none;
+                }
+            }
+        </style>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function filterPortfolio(category) {
+                var items = document.querySelectorAll('.portfolio-item');
+                items.forEach(function(item) {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            }
+            var filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    filterPortfolio(btn.getAttribute('data-filter'));
+                });
+            });
+            // Show all by default
+            filterPortfolio('all');
+            document.querySelectorAll('.expand-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var card = btn.closest('.pricing-card');
+                    card.classList.toggle('expanded');
+                });
+            });
+        });
+        </script>
+    </head>
+   
+  
+    <body id="body" data-spy="scroll" data-target=".header">
+        <!-- Particle Background -->
+        <div class="particle-bg" id="particle-bg"></div>
+
+          <header class="header navbar-fixed-top modern-nav">
+              <nav class="navbar" role="navigation">
+                <div class="container">
+                      <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                          <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main" src="img/logo.png" alt="Fluxi Logo">
+                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Fluxi Dark Logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse nav-collapse">
+					
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">Who We Are</a></li>
+								<li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#services">Services</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Portfolio</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#pricing">Pricing</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                                <li class="js_nav-item nav-item download-app-item" style="display: none;"><a class="nav-item-child nav-item-hover download-app-btn" href="#" onclick="installApp(); return false;" title="Download App"><i class="icon-screen-smartphone" style="color: #FB5D00;"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+			</header>
+       
+        <div id="carousel-example-generic" class="carousel slide hero-modern" data-ride="carousel">
+            <div class="container">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+            </div>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive" src="img/1920x1080/01.jpg" alt="Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h1 class="carousel-title gradient-text" style="color: #FFFFFF;">Fluxi: Creative Tech Agency</h1>
+                                <p class="color-white">We blend software development and graphic design to elevate your business online and offline.</p>
+                            </div>
+                            <a href="#contact" class="btn-theme btn-theme-sm btn-white-brd text-uppercase modern-btn" style="background-color: #FFFFFF; color: #151312; border: 2px solid #FFFFFF;">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="img/1920x1080/02.jpg" alt="Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h2 class="carousel-title gradient-text" style="color: #FFFFFF;">Your Digital & Visual Partner</h2>
+                                <p class="color-white">From clean websites to eye-catching branding, we've got you covered.</p>
+                            </div>
+                            <a href="#about" class="btn-theme btn-theme-sm btn-white-brd text-uppercase modern-btn" style="background-color: #FFFFFF; color: #151312; border: 2px solid #FFFFFF;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="content-lg container">
+                <div class="masonry-grid row">
+                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
+                        <div class="margin-b-60">
+                            <h2 style="color: #FB5D00;" class="section-heading">WHO WE ARE</h2>
+                            <p style="color: #FFFFFF;">Fluxi is a South African creative studio that blends software development (websites and mobile apps) and graphic design (branding and visuals) into one powerful service. Whether you need a clean website, a functional mobile app, or eye-catching branding, Fluxi makes your business look and perform better — online and offline.</p>
+                        </div>
+                        <img class="full-width img-responsive wow fadeInUp" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Graphics Design" data-wow-duration=".3" data-wow-delay=".2s">
+                    </div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                        <div class="margin-b-60">
+                          <h2 style="color: #FFFFFF;">Digital Solutions</h2>
+                          <p style="color: #FFFFFF;">We craft innovative and scalable software solutions, including responsive business websites, robust e-commerce platforms, and intuitive mobile applications for both Android and iOS.</p>  
+                        </div>
+						 <img class="full-width img-responsive wow fadeInUp" src="img/500x500/02.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".3s">
+                    </div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                        <div class="margin-t-60 margin-b-60">
+                            <h2 style="color: #FFFFFF;">Visual Storytelling</h2>
+                            <p style="color: #FFFFFF;">Our graphic design services help you create a compelling visual identity through custom logos, engaging social media content, impactful flyers, and professional video editing, ensuring your brand stands out.</p>
+                        </div>
+                        <img class="full-width img-responsive wow fadeInUp" src="img/500x500/03.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".4s">
+                    </div>
+				</div>
+            </div>
+            
+            <div class="bg-color-sky-light">
+                <div class="content-lg container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 md-margin-b-60">
+                            <div class="margin-t-50 margin-b-30">
+                                <h2 style="color: #FB5D00;">Why Choose Fluxi?</h2>
+                                <p>We are a passionate team dedicated to delivering high-quality, creative, and effective solutions for your business. We prioritize your vision and work closely with you to bring it to life, ensuring seamless integration between your digital platforms and visual brand identity.</p>
+                            </div>
+                            <a href="#contact" class="btn-theme btn-theme-sm btn-white-bg text-uppercase" style="background-color: #FB5D00; color: #FFFFFF;">Get Started</a>
+                        </div>
+                        <div class="col-md-5 col-sm-7 col-md-offset-2">
+                            <div class="accordion">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a class="panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Integrated Solutions
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                We offer both software development (websites and mobile apps) and graphic design, providing a cohesive approach to your digital presence and branding.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Modern & Responsive
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                Our solutions are built with the latest technologies, ensuring they are fast, modern, and mobile-friendly across all devices and platforms.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Client-Focused Approach
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                We listen to your needs and work collaboratively to achieve your business goals with effective and impactful results, providing transparent pricing and friendly service.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Section -->
+        <div id="services">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="content-lg container">
+                    <div class="row margin-b-40">
+                        <div class="col-sm-12 text-center">
+                            <h2 style="color: #FB5D00;" class="section-heading">OUR SERVICES</h2>
+                            <p>We offer comprehensive solutions blending software development and graphic design to boost your online presence and brand identity.</p>
+                        </div>
+                    </div>
+                    <div class="row row-space-1 margin-b-2" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+                        <div class="col-sm-4 service-card" style="margin-bottom: 32px; cursor: pointer; display: flex; justify-content: center; position: relative;" onclick="showServiceModal('graphics')">
+                            <div class="service" data-height="height" style="width: 100%; max-width: 340px;">
+                                <div class="service-element">
+                                    <i class="service-icon icon-picture" style="color: #FB5D00;"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700;">Graphics Design</h3>
+                                    <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">Logos, branding, social media, flyers, and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service-card" style="margin-bottom: 32px; cursor: pointer; display: flex; justify-content: center; position: relative;" onclick="showServiceModal('web')">
+                            <div class="service" data-height="height" style="width: 100%; max-width: 340px;">
+                                <div class="service-element">
+                                    <i class="service-icon icon-screen-tablet" style="color: #FB5D00;"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700;">Web Development</h3>
+                                    <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">Modern, responsive websites for your business.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service-card" style="margin-bottom: 32px; cursor: pointer; display: flex; justify-content: center; position: relative;" onclick="showServiceModal('mobile')">
+                            <div class="service" data-height="height" style="width: 100%; max-width: 340px;">
+                                <div class="service-element">
+                                    <i class="service-icon icon-speedometer" style="color: #FB5D00;"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700;">Mobile Development</h3>
+                                    <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">Android & iOS apps for seamless user experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space-1 margin-b-2" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+                        <div class="col-sm-4 service-card" style="margin-bottom: 32px; cursor: pointer; display: flex; justify-content: center; position: relative;" onclick="showServiceModal('video')">
+                            <div class="service" data-height="height" style="width: 100%; max-width: 340px;">
+                                <div class="service-element">
+                                    <i class="service-icon icon-camrecorder" style="color: #FB5D00;"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700;">Video Ads Creation</h3>
+                                    <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">Professional video ads for social media and web.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service-card" style="margin-bottom: 32px; cursor: pointer; display: flex; justify-content: center; position: relative;" onclick="showServiceModal('seo')">
+                            <div class="service" data-height="height" style="width: 100%; max-width: 340px;">
+                                <div class="service-element">
+                                    <i class="service-icon icon-magnifier" style="color: #FB5D00;"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700;">SEO</h3>
+                                    <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">Boost your Google ranking and get found online.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 service-card" style="margin-bottom: 32px; cursor: pointer; display: flex; justify-content: center; position: relative;" onclick="showServiceModal('maintenance')">
+                            <div class="service" data-height="height" style="width: 100%; max-width: 340px;">
+                                <div class="service-element">
+                                    <i class="service-icon icon-wrench" style="color: #FB5D00;"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700;">Website Maintenance</h3>
+                                    <p style="font-family: 'Poppins', sans-serif; font-weight: 600;">Keep your site secure, updated, and running smoothly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Modals -->
+                    <div id="service-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(21,19,18,0.85); z-index:2000; align-items:center; justify-content:center;">
+                        <div id="service-modal-content" style="background:#fff; color:#151312; border-radius:24px; max-width:450px; width:90%; padding:32px; box-shadow:0 8px 32px rgba(21,19,18,0.2); font-family:'Poppins',sans-serif; position:relative;">
+                            <span style="position:absolute; top:24px; right:32px; font-size:2rem; cursor:pointer; font-weight:700;" onclick="closeServiceModal()">&times;</span>
+                            <div id="service-modal-body"></div>
+                        </div>
+                    </div>
+
+<script>
+function showServiceModal(service) {
+  var content = {
+    graphics: `<h2 style='color:#FB5D00;font-family:Poppins,sans-serif;font-weight:700;'>Graphics Design</h2><p style='font-family:Poppins,sans-serif;font-weight:600;'>We create logos, branding, flyers, social media graphics, business cards, brochures, and more. Our creative team ensures your brand stands out with unique, memorable visuals tailored to your audience and industry.</p><ul style='font-family:Poppins,sans-serif;font-weight:600;'><li>Logo Design: <b>from R350</b></li><li>Branding Packages: <b>from R1,500</b></li><li>Social Media Kits: <b>from R800</b></li></ul>`,
+    web: `<h2 style='color:#FB5D00;font-family:Poppins,sans-serif;font-weight:700;'>Web Development</h2><p style='font-family:Poppins,sans-serif;font-weight:600;'>We build modern, responsive, and SEO-friendly websites using the latest technologies. From landing pages to full business sites, we deliver fast, secure, and scalable solutions.</p><ul style='font-family:Poppins,sans-serif;font-weight:600;'><li>Business Website: <b>from R1,500</b></li><li>E-commerce: <b>from R3,500</b></li><li>Landing Page: <b>from R1,000</b></li></ul>`,
+    mobile: `<h2 style='color:#FB5D00;font-family:Poppins,sans-serif;font-weight:700;'>Mobile Development</h2><p style='font-family:Poppins,sans-serif;font-weight:600;'>Custom Android and iOS apps for your business, built for performance and user experience. We handle everything from design to app store launch.</p><ul style='font-family:Poppins,sans-serif;font-weight:600;'><li>Basic App: <b>from R5,000</b></li><li>Advanced App: <b>from R10,000</b></li></ul>`,
+    video: `<h2 style='color:#FB5D00;font-family:Poppins,sans-serif;font-weight:700;'>Video Ads Creation</h2><p style='font-family:Poppins,sans-serif;font-weight:600;'>Professional video ads for social media, YouTube, and your website. Includes scriptwriting, editing, and motion graphics.</p><ul style='font-family:Poppins,sans-serif;font-weight:600;'><li>Short Video (up to 30s): <b>from R800</b></li><li>Full Ad (up to 2min): <b>from R2,000</b></li></ul>`,
+    seo: `<h2 style='color:#FB5D00;font-family:Poppins,sans-serif;font-weight:700;'>SEO</h2><p style='font-family:Poppins,sans-serif;font-weight:600;'>Boost your Google ranking and get found online. We offer on-page SEO, keyword research, technical optimization, and monthly reporting.</p><ul style='font-family:Poppins,sans-serif;font-weight:600;'><li>SEO Audit: <b>R500</b></li><li>Monthly SEO: <b>from R1,200/mo</b></li></ul>`,
+    maintenance: `<h2 style='color:#FB5D00;font-family:Poppins,sans-serif;font-weight:700;'>Website Maintenance</h2><p style='font-family:Poppins,sans-serif;font-weight:600;'>Keep your website secure, updated, and running smoothly. Includes backups, updates, security monitoring, and minor content changes.</p><ul style='font-family:Poppins,sans-serif;font-weight:600;'><li>Basic Maintenance: <b>R350/mo</b></li><li>Full Support: <b>R800/mo</b></li></ul>`
+  };
+  document.getElementById('service-modal-body').innerHTML = content[service];
+  document.getElementById('service-modal').style.display = 'flex';
+}
+function closeServiceModal() {
+  document.getElementById('service-modal').style.display = 'none';
+}
+</script>
+
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Section -->
+        <div id="work" class="portfolio-section-glass">
+            <div class="content-lg container" style="background: transparent; max-width: 100vw;">
+                <div class="row margin-b-40">
+                    <div class="col-sm-12 text-center">
+                        <h2 style="color: #FB5D00;" class="section-heading">RECENT PROJECTS</h2>
+                        <p>Explore our work across web development, mobile apps, and graphic design.</p>
+                    </div>
+                </div>
+                <div class="row margin-b-40">
+                    <div class="col-sm-12 text-center">
+                        <div class="portfolio-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="web">Web</button>
+                            <button class="filter-btn" data-filter="mobile">Mobile</button>
+                            <button class="filter-btn" data-filter="graphics">Graphics</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" alt="Logo Design">
+                        <div class="card-hover">
+                            <h4>Logo Design</h4>
+                            <p>Professional logo design and branding solutions for your business.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item mobile">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Mobile Interface">
+                        <div class="card-hover">
+                            <h4>Mobile Interface</h4>
+                            <p>Modern mobile app interfaces with intuitive user experience.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item web">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Web Interface">
+                        <div class="card-hover">
+                            <h4>Web Interface</h4>
+                            <p>Responsive web interfaces and modern website designs.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item web">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce Store">
+                        <div class="card-hover">
+                            <h4>E-commerce Store</h4>
+                            <p>Online shops with secure payments and product management.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item web">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Portfolio Website">
+                        <div class="card-hover">
+                            <h4>Portfolio Website</h4>
+                            <p>Showcase your work with a beautiful, fast portfolio site.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item mobile">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Fitness App">
+                        <div class="card-hover">
+                            <h4>Fitness App</h4>
+                            <p>Track workouts, nutrition, and progress with ease.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item mobile">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Delivery App">
+                        <div class="card-hover">
+                            <h4>Delivery App</h4>
+                            <p>On-demand delivery solutions for food, parcels, and more.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" alt="Logo Design">
+                        <div class="card-hover">
+                            <h4>Logo Design</h4>
+                            <p>Unique, memorable logos for your brand or business.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80" alt="Social Media Graphics">
+                        <div class="card-hover">
+                            <h4>Social Media Graphics</h4>
+                            <p>Banners, posts, and stories for all platforms.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Flyer Design">
+                        <div class="card-hover">
+                            <h4>Flyer Design</h4>
+                            <p>Eye-catching flyers for events, promos, and more.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Banner Design">
+                        <div class="card-hover">
+                            <h4>Banner Design</h4>
+                            <p>Large format banners for events, shops, and campaigns.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Business Card Design">
+                        <div class="card-hover">
+                            <h4>Business Card Design</h4>
+                            <p>Professional business cards to make a lasting impression.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item graphics">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80" alt="Company Profile">
+                        <div class="card-hover">
+                            <h4>Company Profile</h4>
+                            <p>Elegant company profiles to showcase your business story.</p>
+                            <a href="#contact" class="card-btn">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pricing">
+            <div class="bg-color-sky-light" style="background: transparent;">
+                <div class="content-lg container">
+                    <div class="row margin-b-40">
+                        <div class="col-sm-12 text-center">
+                            <h2 style="color: #FB5D00;" class="section-heading">OUR PRICING</h2>
+                            <p>Transparent pricing for all our services. All prices are starting rates and may vary based on requirements.</p>
+                        </div>
+                    </div>
+                    <div class="pricing-grid">
+                        <!-- Mobile Pricing -->
+                        <div class="pricing-card">
+                            <div class="pricing-title">Mobile Development</div>
+                            <div class="main-price">From R5,000</div>
+                            <div class="pricing-details" style="max-height:none;opacity:1;margin-top:18px;">
+                                <div class="pricing-details-list">
+                                    <div class="pricing-details-row"><span class="pricing-details-type">GIS-based App</span><span class="pricing-details-price">R15,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Booking App</span><span class="pricing-details-price">R15,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Restaurant/Food Delivery App</span><span class="pricing-details-price">R15,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Taxi/Transport App</span><span class="pricing-details-price">R18,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Fitness/Wellness App</span><span class="pricing-details-price">R10,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">eCommerce Mobile App</span><span class="pricing-details-price">R18,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Social Networking App</span><span class="pricing-details-price">R20,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Basic App</span><span class="pricing-details-price">R5,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Advanced App</span><span class="pricing-details-price">R10,000</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Graphics Pricing -->
+                        <div class="pricing-card">
+                            <div class="pricing-title">Graphics Design</div>
+                            <div class="main-price">From R350</div>
+                            <div class="pricing-details" style="max-height:none;opacity:1;margin-top:18px;">
+                                <div class="pricing-details-list">
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Logo Design</span><span class="pricing-details-price">R350</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Branding Package</span><span class="pricing-details-price">R1,500</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Social Media Kit</span><span class="pricing-details-price">R800</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Flyer Design</span><span class="pricing-details-price">R250</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Business Card Design</span><span class="pricing-details-price">R200</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Company Profile</span><span class="pricing-details-price">R600</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Poster/Banner Design</span><span class="pricing-details-price">R300</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Video Ad/Promo</span><span class="pricing-details-price">R800</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Web Pricing -->
+                        <div class="pricing-card">
+                            <div class="pricing-title">Web Development</div>
+                            <div class="main-price">From R1,500</div>
+                            <div class="pricing-details" style="max-height:none;opacity:1;margin-top:18px;">
+                                <div class="pricing-details-list">
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Business Website</span><span class="pricing-details-price">R1,500</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">eCommerce Website</span><span class="pricing-details-price">R3,500</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Booking Website</span><span class="pricing-details-price">R3,500</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Restaurant Website</span><span class="pricing-details-price">R3,500</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Portfolio Website</span><span class="pricing-details-price">R1,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Landing Page</span><span class="pricing-details-price">R1,000</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Online Store</span><span class="pricing-details-price">R3,500</span></div>
+                                    <div class="pricing-details-row"><span class="pricing-details-type">Blog/News Website</span><span class="pricing-details-price">R2,000</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="section-seperator">
+                <div class="content-lg container">
+                    <div class="row">
+                        <div class="col-sm-4 sm-margin-b-50">
+                            <h3 style="color: #FB5D00;">GET A QUOTE</h3>
+                            <p>Let's build your brand together. We promise quick turnaround times, friendly service, and real, measurable results for your business goals.</p>
+                            <ul class="list-unstyled contact-list">
+                                <li><i class="margin-r-10 color-base icon-call-out" style="color: #FB5D00;"></i> +27 12 345 6789</li>
+                                <li><i class="margin-r-10 color-base icon-envelope" style="color: #FB5D00;"></i> info@fluxi.co.za</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-8">
+                            <form class="sky-form contact-style">
+                                <fieldset>
+                                    <div class="margin-b-20">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="margin-b-20">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="margin-b-20">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                    <div class="margin-b-20">
+                                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" style="background-color: #FB5D00; color: #FFFFFF;">Request a Free Quote</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="map height-300">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.0694570748947!2d7.455080415208266!3d46.94067397914616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39d0cf20e8d1%3A0x9daac4cd3043d067!2sThunstrasse+50%2C+3005+Bern%2C+Switzerland!5e0!3m2!1sen!2sin!4v1496749852928" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+        </div>
+        <footer class="footer" style="background: linear-gradient(135deg, #151312 0%, #1a1a1a 50%, #151312 100%); border-top: 2px solid #FB5D00;">
+            <div class="section-seperator">
+                <div class="content-md container">
+                    <div class="row">
+                        <div class="col-sm-4 sm-margin-b-30">
+                            <div class="footer-brand-section">
+                                <img class="footer-logo" src="img/logo-dark.png" alt="Fluxi Logo" style="height: 50px; margin-bottom: 20px;">
+                                <h3 style="color: #FB5D00; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 15px;">Fluxi</h3>
+                                <p style="color: #fff; font-family: 'Poppins', sans-serif; font-weight: 400; line-height: 1.6; margin-bottom: 25px;">South African creative studio blending software development and graphic design to elevate your business online and offline.</p>
+                                <div class="social-links" style="display: flex; gap: 15px; margin-bottom: 20px;">
+                                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(251, 93, 0, 0.1); border: 2px solid #FB5D00; border-radius: 50%; color: #FB5D00; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#FB5D00'; this.style.color='#fff'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(251, 93, 0, 0.1)'; this.style.color='#FB5D00'; this.style.transform='translateY(0)'">
+                                        <i class="fa fa-facebook" style="font-size: 16px;"></i>
+                                    </a>
+                                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(251, 93, 0, 0.1); border: 2px solid #FB5D00; border-radius: 50%; color: #FB5D00; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#FB5D00'; this.style.color='#fff'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(251, 93, 0, 0.1)'; this.style.color='#FB5D00'; this.style.transform='translateY(0)'">
+                                        <i class="fa fa-instagram" style="font-size: 16px;"></i>
+                                    </a>
+                                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(251, 93, 0, 0.1); border: 2px solid #FB5D00; border-radius: 50%; color: #FB5D00; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#FB5D00'; this.style.color='#fff'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(251, 93, 0, 0.1)'; this.style.color='#FB5D00'; this.style.transform='translateY(0)'">
+                                        <i class="fa fa-linkedin" style="font-size: 16px;"></i>
+                                    </a>
+                                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(251, 93, 0, 0.1); border: 2px solid #FB5D00; border-radius: 50%; color: #FB5D00; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#FB5D00'; this.style.color='#fff'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(251, 93, 0, 0.1)'; this.style.color='#FB5D00'; this.style.transform='translateY(0)'">
+                                        <i class="fa fa-twitter" style="font-size: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 sm-margin-b-30">
+                            <h4 style="color: #FB5D00; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px; font-size: 18px;">Quick Links</h4>
+                            <ul class="list-unstyled footer-list" style="margin: 0; padding: 0;">
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#body" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Home</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#about" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Who We Are</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#services" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Services</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#work" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Portfolio</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#pricing" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Pricing</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2 sm-margin-b-30">
+                            <h4 style="color: #FB5D00; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px; font-size: 18px;">Services</h4>
+                            <ul class="list-unstyled footer-list" style="margin: 0; padding: 0;">
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#services" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Web Development</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#services" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Mobile Apps</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#services" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Graphics Design</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#services" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">SEO & Marketing</a></li>
+                                <li class="footer-list-item" style="margin-bottom: 12px;"><a href="#services" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; transition: all 0.3s ease; display: block; padding: 5px 0;" onmouseover="this.style.color='#FB5D00'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='#fff'; this.style.transform='translateX(0)'">Maintenance</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4 style="color: #FB5D00; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px; font-size: 18px;">Newsletter</h4>
+                            <p style="color: #fff; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 20px; line-height: 1.6;">Stay updated with our latest projects, tips, and industry insights.</p>
+                            <div class="newsletter-form" style="position: relative;">
+                                <input type="email" placeholder="Enter your email" style="width: 100%; padding: 12px 15px; border: 2px solid rgba(251, 93, 0, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: #fff; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='#FB5D00'; this.style.background='rgba(255, 255, 255, 0.1)'" onblur="this.style.borderColor='rgba(251, 93, 0, 0.3)'; this.style.background='rgba(255, 255, 255, 0.05)'">
+                                <button type="submit" style="position: absolute; right: 5px; top: 5px; background: #FB5D00; color: #fff; border: none; border-radius: 6px; padding: 8px 15px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#FF8C00'" onmouseout="this.style.background='#FB5D00'">Subscribe</button>
+                            </div>
+                            <div class="contact-info" style="margin-top: 25px;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <i class="fa fa-phone" style="color: #FB5D00; margin-right: 10px; width: 20px;"></i>
+                                    <span style="color: #fff; font-family: 'Poppins', sans-serif; font-weight: 400;">+27 12 345 6789</span>
+                                </div>
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <i class="fa fa-envelope" style="color: #FB5D00; margin-right: 10px; width: 20px;"></i>
+                                    <span style="color: #fff; font-family: 'Poppins', sans-serif; font-weight: 400;">info@fluxi.co.za</span>
+                                </div>
+                                <div style="display: flex; align-items: center;">
+                                    <i class="fa fa-map-marker" style="color: #FB5D00; margin-right: 10px; width: 20px;"></i>
+                                    <span style="color: #fff; font-family: 'Poppins', sans-serif; font-weight: 400;">Johannesburg, South Africa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content container" style="border-top: 1px solid rgba(251, 93, 0, 0.2); padding-top: 20px;">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p class="margin-b-0" style="color: #fff; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px;">© 2024 <span style="color: #FB5D00; font-weight: 700;">Fluxi</span>. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <ul class="list-unstyled" style="margin: 0; padding: 0; display: flex; justify-content: flex-end; gap: 20px;">
+                            <li><a href="#" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px; transition: all 0.3s ease;" onmouseover="this.style.color='#FB5D00'" onmouseout="this.style.color='#fff'">Privacy Policy</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px; transition: all 0.3s ease;" onmouseover="this.style.color='#FB5D00'" onmouseout="this.style.color='#fff'">Terms & Conditions</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 14px; transition: all 0.3s ease;" onmouseover="this.style.color='#FB5D00'" onmouseout="this.style.color='#fff'">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+
+        <!-- Mobile App Scripts -->
+        <script>
+            // Register Service Worker
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('SW registered: ', registration);
+                        })
+                        .catch(registrationError => {
+                            console.log('SW registration failed: ', registrationError);
+                        });
+                });
+            }
+
+            // Install Prompt
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                // Show install button in header if not already installed
+                if (!window.matchMedia('(display-mode: standalone)').matches) {
+                    showHeaderInstallButton();
+                }
+            });
+
+            function showHeaderInstallButton() {
+                const downloadAppItem = document.querySelector('.download-app-item');
+                if (downloadAppItem) {
+                    downloadAppItem.style.display = 'block';
+                }
+            }
+
+            function installApp() {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('User accepted the install prompt');
+                            // Hide the button after successful installation
+                            const downloadAppItem = document.querySelector('.download-app-item');
+                            if (downloadAppItem) {
+                                downloadAppItem.style.display = 'none';
+                            }
+                        } else {
+                            console.log('User dismissed the install prompt');
+                        }
+                        deferredPrompt = null;
+                    });
+                }
+            }
+
+            // Check if app is already installed
+            window.addEventListener('load', () => {
+                if (window.matchMedia('(display-mode: standalone)').matches) {
+                    console.log('App is running in standalone mode');
+                    // Hide download button if already installed
+                    const downloadAppItem = document.querySelector('.download-app-item');
+                    if (downloadAppItem) {
+                        downloadAppItem.style.display = 'none';
+                    }
+                }
+            });
+
+            // Particle Background Effect
+            function createParticles() {
+                const particleBg = document.getElementById('particle-bg');
+                const particleCount = 50;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                    particleBg.appendChild(particle);
+                }
+            }
+
+            // Scroll Reveal Animation
+            function initScrollReveal() {
+                const elements = document.querySelectorAll('.scroll-reveal');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                elements.forEach(element => {
+                    observer.observe(element);
+                });
+            }
+
+            // Modern Button Effects
+            function initModernButtons() {
+                const buttons = document.querySelectorAll('.modern-btn');
+                buttons.forEach(button => {
+                    button.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-3px) scale(1.05)';
+                    });
+                    
+                    button.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0) scale(1)';
+                    });
+                });
+            }
+
+            // Glass Card Effects
+            function initGlassCards() {
+                const cards = document.querySelectorAll('.glass-card');
+                cards.forEach(card => {
+                    card.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-10px) scale(1.02)';
+                        this.style.boxShadow = '0 20px 40px rgba(251, 93, 0, 0.2)';
+                    });
+                    
+                    card.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0) scale(1)';
+                        this.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
+                    });
+                });
+            }
+
+            // Initialize all modern effects
+            document.addEventListener('DOMContentLoaded', function() {
+                createParticles();
+                initScrollReveal();
+                initModernButtons();
+                initGlassCards();
+                
+                // Add gradient text effect to headings
+                const headings = document.querySelectorAll('h1, h2, h3');
+                headings.forEach(heading => {
+                    if (heading.textContent.includes('Fluxi') || heading.textContent.includes('Creative')) {
+                        heading.classList.add('gradient-text');
+                    }
+                });
+                
+                // Add glass card effect to service cards
+                const serviceCards = document.querySelectorAll('.service');
+                serviceCards.forEach(card => {
+                    card.classList.add('glass-card');
+                });
+                
+                // Add modern button class to existing buttons
+                const existingButtons = document.querySelectorAll('.btn-theme');
+                existingButtons.forEach(button => {
+                    button.classList.add('modern-btn');
+                });
+                
+                // Header scroll effect
+                const header = document.querySelector('.modern-nav');
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 100) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            });
+        </script>
+
+    </body>
+</html>

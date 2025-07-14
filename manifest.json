@@ -1,0 +1,27 @@
+{
+  "name": "Fluxi - Creative Tech Agency",
+  "short_name": "Fluxi",
+  "description": "South African creative studio blending software development and graphic design",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151312",
+  "theme_color": "#FB5D00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+} 
