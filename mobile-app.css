@@ -1,3 +1,97 @@
+/* --- FLUXI 3-COLOR PALETTE ONLY --- */
+:root {
+  --orange: #FB5D00;
+  --white: #FFFFFF;
+  --black: #151312;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif !important;
+  background: var(--black);
+  color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6, .section-heading, .carousel-title, .pricing-title, .footer h3, .footer h4, .service-info h3 {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  color: var(--orange) !important;
+  letter-spacing: 0.5px;
+}
+
+/* Glassmorphism Cards */
+.glass-card, .pricing-card, .service-card .service {
+  background: var(--black) !important;
+  border: 2.5px solid var(--orange) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 40px 0 var(--black), 0 1.5px 8px var(--orange) !important;
+  color: var(--white) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+/* Buttons */
+.btn-theme, .modern-btn, .filter-btn, .portfolio-item .card-btn {
+  background: var(--black) !important;
+  color: var(--orange) !important;
+  border: 2px solid var(--orange) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  transition: all 0.2s;
+}
+.btn-theme:hover, .modern-btn:hover, .filter-btn:hover, .portfolio-item .card-btn:hover {
+  background: var(--orange) !important;
+  color: var(--black) !important;
+  border: 2px solid var(--orange) !important;
+}
+
+/* Portfolio/Project Cards */
+.portfolio-item {
+  background: var(--black) !important;
+  border: 2px solid var(--orange) !important;
+  color: var(--white) !important;
+}
+.portfolio-item .card-hover h4 {
+  color: var(--orange) !important;
+}
+
+/* Skills Progress Bars */
+.progress-bar {
+  background: var(--orange) !important;
+}
+
+/* Section Separators */
+.section-seperator {
+  border-top: 2px solid var(--orange) !important;
+}
+
+/* Footer */
+.footer {
+  background: var(--black) !important;
+  border-top: 2px solid var(--orange) !important;
+}
+
+/* Particle/Futuristic Network Background (reuse, recolor) */
+.particle {
+  background: var(--orange) !important;
+  box-shadow: 0 0 8px 2px var(--orange), 0 0 2px 1px var(--black);
+}
+
+/* Inputs/Forms */
+input, textarea, .form-control {
+  font-family: 'Poppins', sans-serif !important;
+  background: var(--black) !important;
+  color: var(--white) !important;
+  border: 2px solid var(--orange) !important;
+  border-radius: 8px !important;
+}
+input:focus, textarea:focus, .form-control:focus {
+  border-color: var(--orange) !important;
+  background: var(--black) !important;
+}
+
+/* END FORTUNE MAKUNYA PORTFOLIO THEME */
+
 /* Mobile App Specific Styles */
 @media (display-mode: standalone) {
     body {
@@ -745,25 +839,156 @@
 }
 /* END SMALLER HEADER LOGO ICON */ 
 
-@media (max-width: 768px) {
-  .portfolio-filter {
+@media (max-width: 991px) {
+  .header .navbar-toggle {
+    margin-top: 24px !important;
+    margin-bottom: 8px !important;
     position: relative;
-    z-index: 100 !important;
+    z-index: 120 !important;
+  }
+  .header .logo {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .header .navbar-toggle {
+    margin-top: 28px !important;
+    margin-bottom: 8px !important;
+    position: relative;
+    z-index: 120 !important;
+  }
+  .header .logo {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+  }
+  .portfolio-filter {
+    position: relative !important;
+    z-index: 200 !important;
     pointer-events: auto !important;
+    background: none !important;
   }
   .filter-btn {
-    z-index: 101 !important;
+    z-index: 201 !important;
     pointer-events: auto !important;
+    position: relative !important;
   }
 }
 @media (max-width: 480px) {
-  .portfolio-filter {
+  .header .navbar-toggle {
+    margin-top: 28px !important;
+    margin-bottom: 8px !important;
     position: relative;
-    z-index: 100 !important;
+    z-index: 120 !important;
+  }
+  .header .logo {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+  }
+  .portfolio-filter {
+    position: relative !important;
+    z-index: 200 !important;
     pointer-events: auto !important;
+    background: none !important;
   }
   .filter-btn {
-    z-index: 101 !important;
+    z-index: 201 !important;
     pointer-events: auto !important;
+    position: relative !important;
   }
 } 
+
+@media (max-width: 991px), (max-width: 768px), (max-width: 480px) {
+  .portfolio-section-glass,
+  .content-lg,
+  .portfolio-grid,
+  .portfolio-filter {
+    pointer-events: auto !important;
+    z-index: 300 !important;
+    position: relative !important;
+  }
+  .portfolio-filter {
+    background: rgba(255,59,63,0.12) !important; /* DEBUG: Remove after confirming clickability */
+    box-shadow: 0 2px 12px #FF3B3F33 !important;
+  }
+  .filter-btn {
+    z-index: 301 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    }
+} 
+
+/* --- PORTFOLIO FILTERING FIX --- */
+.portfolio-item {
+  display: none !important;
+}
+.portfolio-item.show {
+  display: flex !important;
+}
+/* END PORTFOLIO FILTERING FIX */ 
+
+/* --- RESTORED SERVICE CARD DESIGN --- */
+.service-card {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.service-card .service {
+  width: 100%;
+  max-width: 340px;
+  background: rgba(21,19,18,0.92) !important;
+  border: 2.5px solid #FB5D00 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 24px rgba(21,19,18,0.18), 0 1.5px 8px #FB5D0033 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 36px 24px 28px 24px;
+  color: #fff !important;
+}
+.service-card .service-icon {
+  font-size: 44px;
+  margin-bottom: 20px;
+  color: #FB5D00 !important;
+  display: block;
+}
+.service-card .service-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.service-card .service-info p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 24px;
+  }
+  .service-card .service {
+    padding: 28px 12px 20px 12px;
+    max-width: 100%;
+  }
+  .service-card .service-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  .service-card .service-info h3 {
+    font-size: 17px;
+  }
+  .service-card .service-info p {
+    font-size: 13px;
+  }
+}
+/* END RESTORED SERVICE CARD DESIGN */ 

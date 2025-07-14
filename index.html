@@ -486,13 +486,16 @@
             }
             var filterBtns = document.querySelectorAll('.filter-btn');
             filterBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
+                function handleFilterEvent(e) {
+                    e.preventDefault();
+                    console.log('Filter button pressed:', btn.getAttribute('data-filter'));
                     filterBtns.forEach(function(b) { b.classList.remove('active'); });
                     btn.classList.add('active');
                     filterPortfolio(btn.getAttribute('data-filter'));
+                }
+                btn.addEventListener('click', handleFilterEvent);
+                btn.addEventListener('touchstart', handleFilterEvent);
                 });
-            });
-            // Show all by default
             filterPortfolio('all');
             document.querySelectorAll('.expand-btn').forEach(function(btn) {
                 btn.addEventListener('click', function() {
